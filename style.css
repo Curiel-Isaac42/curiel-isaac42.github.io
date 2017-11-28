@@ -75,9 +75,13 @@ h1 {
 }
 
 .btn-one {
-  background-color: #50757e;
   font-family: "Abel";
   text-align: center
+}
+
+.btn-one:hover {
+  background-color: #50757e;
+  transition: all 0.5s ease-in;
 }
 
 .btn-two {
