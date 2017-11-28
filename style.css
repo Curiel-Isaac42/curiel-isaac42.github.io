@@ -4,7 +4,7 @@
 }
 
 header {
-    background-image: url(background.jpg);
+    background-image: url(background.jpg), linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -45,12 +45,9 @@ body {
   margin: auto;
 }
 
-.hero {
+.title {
   position: absolute;
-  width: 1200px;
-  margin-left: 0px;
-  margin-top: 0px;
-
+  width: 100vw;
 }
 
 h1 {
@@ -62,8 +59,8 @@ h1 {
 }
 
 .button {
-  margin-top: 30px;
-  margin-left: 440px;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .btn {
@@ -77,15 +74,17 @@ h1 {
 }
 
 .btn-one {
-  background-color: gray;
+  background-color: #50757e;
   font-family: "Abel";
+  text-align: center
 }
 
 .btn-two {
   font-family: "Abel";
+  text-align: center
 }
 
 .btn-two:hover {
-  background-color: gray;
+  background-color: #50757e;
   transition: all 0.5s ease-in;
 }
