@@ -4,10 +4,7 @@
 }
 
 header {
-    background-image: url(background.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
+  height: 20px;
 }
 
 .main-nav {
@@ -29,7 +26,7 @@ header {
     font-size: 15px;
 }
 
-.main-nav li.active a {
+.main-nav .active a {
     border: 1px solid white;
 }
 
@@ -39,6 +36,21 @@ header {
 
 body {
   font-family: "Abel";
+}
+
+body.home {
+  background-image: url(background.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;  
+}
+
+body.about {
+  background-color: #50757e;  
+}
+
+body.stuff {
+  background-color: #50757e;  
 }
 
 .row {
