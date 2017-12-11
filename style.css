@@ -35,7 +35,7 @@ body {
 }
 
 body.home {
-  background-image: url(background.jpg);
+  background-image: url(./images/background.jpg);
   height: 100vh;
   background-size: cover;
   background-position: center;  
