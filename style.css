@@ -1,37 +1,33 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
+/* Home page */
 header {
   height: 20px;
 }
 
 .main-nav {
-    float: right;
-    list-style: none;
-    margin-top: 30px;
-    margin-right: 10px;
+  float: right;
+  list-style: none;
+  margin-top: 30px;
+  margin-right: 10px;
 }
 
 .main-nav li {
-    display: inline-block;
+  display: inline-block;
 }
 
 .main-nav li a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 30px;
-    font-family: "Abel", sans-serif;
-    font-size: 15px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 30px;
+  font-family: "Abel", sans-serif;
+  font-size: 15px;
 }
 
 .main-nav .active a {
-    border: 1px solid white;
+  border: 1px solid white;
 }
 
 .main-nav li a:hover {
-    border: 1px solid white;
+  border: 1px solid white;
 }
 
 body {
@@ -45,14 +41,6 @@ body.home {
   background-position: center;  
 }
 
-body.about {
-  background-color: #50757e;  
-}
-
-body.stuff {
-  background-color: #50757e;  
-}
-
 .row {
   margin: auto;
 }
@@ -63,12 +51,12 @@ body.stuff {
   width: 100vw;
 }
 
-h1 {
+.title h1{
   color: white;
   text-transform: uppercase;
   font-size: 70px;
   text-align: center;
-  margin-top: 225px;
+  margin-top: 260px;
 }
 
 .button {
@@ -104,4 +92,73 @@ h1 {
 .btn-two:hover {
   background-color: #50757e;
   transition: all 0.5s ease-in;
+}
+
+/* Stuff page */
+
+body.stuff {
+  background-color: #50757e;  
+}
+
+
+/* Style for the about page */
+
+body.about {
+  margin-bottom: 0;
+  padding: 0;
+  background-color: #50757e;  
+}
+
+.box{
+  width: 450px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  color: white;
+}
+
+.box-img{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.box h1{
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+.box h5{
+  font-size: 25px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+.box p{
+  text-align: justify;
+}
+
+.box ul{
+  margin: 0;
+  padding: 0;
+}
+
+.box li{
+  display: inline-block;
+  margin: 6px;
+  list-style: none;
+}
+
+.box li a{
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  transition: all ease-in-out 250ms;
+}
+
+.box li a:hover{
+  color: #b9b9b9;
 }
