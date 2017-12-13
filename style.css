@@ -39,6 +39,7 @@ body.home {
   height: 100vh;
   background-size: cover;
   background-position: center;  
+  margin: auto;
 }
 
 .row {
@@ -48,7 +49,7 @@ body.home {
 .title {
   margin-top: 60px;
   position: absolute;
-  width: 100vw;
+  width: 100%;
 }
 
 .title h1{
@@ -129,16 +130,19 @@ body.about {
   font-size: 40px;
   letter-spacing: 2px;
   font-weight: 100;
+  margin: 10px;
 }
 
 .box h5{
   font-size: 25px;
   letter-spacing: 2px;
   font-weight: 100;
+  margin: 5px;
 }
 
 .box p{
   text-align: justify;
+  margin: 10px;
 }
 
 .box ul{
@@ -161,4 +165,25 @@ body.about {
 
 .box li a:hover{
   color: #b9b9b9;
+}
+
+/*Responsive styling*/
+
+@media (max-width:800px) {
+  .main-nav {
+    float: none;
+    list-style: none;
+    margin-top: 30px;
+    margin-right: 10px;
+  }
+  
+  .main-nav li {
+    display: inline-block;
+  }
+  
+  .title h1{
+    font-size: 50px;
+    margin-top: 120px;
+  }
+  
 }
