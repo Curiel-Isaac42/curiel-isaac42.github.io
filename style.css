@@ -115,6 +115,7 @@ body.stuff {
   color: white;
   text-align: center;
   font-size: 25px;
+  margin: 10px;
 }
 
 .stuff a {
