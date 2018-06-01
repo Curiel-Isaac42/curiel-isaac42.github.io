@@ -1,0 +1,89 @@
+
+<html>
+<head>
+<title>Processing Demo</title>
+<script type="text/javascript" src="js/processing.js"></script>
+</head>
+<body>
+    
+<script type="text/processing">
+PImage background, ship, wall;
+
+int count = 0;
+int gamestate = 0;
+int score = 0;
+int highScore = 0;
+int y = 0; 
+int Vy = 0;
+int[] wx = new int[2];
+int[] wy = new int[2];
+
+void setup(){
+  size(800, 600);
+  textSize(40);
+  ship = loadImage("./img/ship5.png");
+  background = loadImage("./img/background1.png");
+  wall = loadImage("./img/asteroid_belt.png");
+}
+
+void draw(){
+  if (gamestate == 0){
+    image(background, count, 0);
+    image(background, width + count, 0);
+    count -= 1;
+    if (count == - width){
+      count = 0;
+    }
+    
+    image(ship, 200, y);
+    Vy += 1;
+    y += Vy;
+    if (count%2 == 0){
+      Vy += 1;
+    }
+    for(int i = 0 ; i < 2; i++) {
+      image(wall, wx[i], wy[i] - (wall.height/2+100));
+      image(wall, wx[i], wy[i] + (wall.height/2+100));
+      if(wx[i] < 0) {
+        wy[i] = (int)random(200, height-200);
+        wx[i] = width;
+      }
+      if(wx[i] == 200) {
+        score += 1;
+        highScore = max(score, highScore);
+      }
+      wx[i] -= 6;
+    }
+    text(""+score, width/2, 500);
+  }
+  if (y < -60 || y > 600){
+    gamestate = 1;
+  }
+  
+  if (gamestate == 1){
+    background(255, 0, 0); //Red screen
+    textSize(50);
+    fill(255, 255, 0);
+    rect(190, 250, 190, 65, 5); //(x, y, width, height, corners)
+    fill(0);
+    text("Restart", 200, 300);
+    if (mouseX > 190 && mouseX < 390 && mouseY > 250 && mouseY < 315){
+      //Changes color of rect on mouse hover
+      fill(0, 255, 255);
+      rect(190, 250, 190, 65, 5); //(x, y, width, height, corners)
+      fill(255);
+      text("Restart", 200, 300);
+      if (mousePressed == true){
+        gamestate = 0;
+      }
+     }
+  }
+}
+
+void mousePressed(){
+  Vy = -15;
+}
+</script>
+<canvas id="sketch" style="border: 1px solid black;"></canvas>
+</body>
+</html>
